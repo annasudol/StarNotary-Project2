@@ -3,7 +3,7 @@ import "./App.css";
 
 function SellStarForm({ accounts, app }) {
   const [price, setPrice] = useState(0);
-  const [starID, setStarID] = useState(0);
+  const [starID, setStarID] = useState('');
 
   const handlePutStarUpForSale= async (event)=> {
     event.preventDefault();
@@ -15,11 +15,11 @@ function SellStarForm({ accounts, app }) {
         <h2>Sell Your Star</h2>
           <label>
             Star Price
-            <input type="number" name="Star Price" value={price} onChange={(event)=> setPrice(event.target.value)} />
+            <input type="text" name="Star Price" value={price} onChange={(event)=> setPrice(event.target.value)} />
           </label>
           <label>
             Star ID
-            <input type="number" name="Star id" value={starID} onChange={(event)=> setStarID(event.target.value)}  />
+            <input type="text" name="Star id" value={starID} onChange={(event)=> setStarID(event.target.value)}  />
           </label>
           <button type="submit" disabled={!starID}>Sell Star</button>
         </form>
