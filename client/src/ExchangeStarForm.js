@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import "./App.css";
 
 function SellStarForm({ accounts, app }) {
-    const [starID1, setStarID1] = useState(null);
-    const [starID2, setStarID2] = useState(null);
+    const [starID1, setStarID1] = useState(0);
+    const [starID2, setStarID2] = useState(0);
 
   const handleExchangeStars= async (event)=> {
     event.preventDefault();
