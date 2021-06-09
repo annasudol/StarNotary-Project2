@@ -6,8 +6,7 @@ function StarInfo1({ accounts, app }) {
 
   const handleSubmitStarInfo= async (event)=> {
     event.preventDefault();
-    console.log(app, starID, accounts);
-    await app.lookUptokenIdToStarInfo(starID).send({from: accounts[0] }).then(res=> setStarInfoResponse({blockHash: res.blockHash, from : res.from}));
+    await app.lookUptokenIdToStarInfo(starID).send({from: accounts[0] }).then(res=> setStarInfoResponse({blockHash: res.blockHash}));
   }
     return (
        <>
@@ -21,10 +20,8 @@ function StarInfo1({ accounts, app }) {
         </form>
         {starInfoResponse && (
         <div className="box">
-            <h3 className="title">Star Name:</h3>
+            <h3 className="title">Block Hash:</h3>
             <p className="title-info">{starInfoResponse.blockHash}</p>
-            <h3 className="title">From:</h3>
-            <p className="title-info">{starInfoResponse.from}</p>
         </div>
         )}
        </>

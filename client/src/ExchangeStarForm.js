@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import "./App.css";
 
 function SellStarForm({ accounts, app }) {
     const [starID1, setStarID1] = useState('');

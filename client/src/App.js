@@ -32,7 +32,12 @@ function App() {
     }
 
     fetchApp()
+    
 }, []);
+
+useEffect(()=> {
+ console.log(app.contract)
+}, [app.contract])
 
 
 

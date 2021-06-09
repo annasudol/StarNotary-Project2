@@ -6,8 +6,7 @@ function AddStar({ accounts, app }) {
 
   const handleSubmitAddStar= async (event)=> {
     event.preventDefault();
-    console.log(starName, starID, starName, starID, accounts[0])
-    await app.createStar(starName, '353454554').send({from: accounts[0] });
+    await app.createStar(starName, starID).send({from: accounts[0] });
   }
     return (
       <form onSubmit={handleSubmitAddStar}>
