@@ -17,6 +17,6 @@ Anna Super Star
 ASS
 
 ### Token Address on the Ropsten Network
-0xAcd66D44DB97923C518Ba7646c6489f66E2eb37d
+0x5C109fD37694c60a17fD5308A651C764C158F398
 
-https://ropsten.etherscan.io/address/0xAcd66D44DB97923C518Ba7646c6489f66E2eb37d
+https://ropsten.etherscan.io/address/0x5C109fD37694c60a17fD5308A651C764C158F398

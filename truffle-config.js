@@ -52,6 +52,7 @@ module.exports = {
       network_id: "*",       // Any network (default: none)
     },
 
+
     // Another network with more advanced options...
     // advanced: {
       // port: 8777,             // Custom port
@@ -79,6 +80,14 @@ module.exports = {
       // network_id: 2111,   // This network is yours, in the cloud.
       // production: true    // Treats this network as if it was a public net. (default: false)
     // }
+  },
+  rinkeby: {
+    provider: function() { 
+     return new HDWalletProvider(mnemonic, "https://rinkeby.infura.io/v3/443eb53cf6f346a3b65cc4d97867a33c");
+    },
+    network_id: 4,
+    gas: 4500000,
+    gasPrice: 10000000000,
   },
 
   // Set default mocha options here, use special reporters etc.
