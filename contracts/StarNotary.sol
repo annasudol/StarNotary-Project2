@@ -75,8 +75,4 @@ contract StarNotary is ERC721 {
         _transferFrom(owner, _to1, _tokenId);
     }
 
-    function showAllAstars() public {
-        // tokenIdToStarInfo;
-    }
-
 }

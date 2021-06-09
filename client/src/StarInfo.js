@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 
-function StarInfo1({ accounts, app }) {
+function StarInfo1({ app }) {
   const [starInfoResponse, setStarInfoResponse] = useState(null);
   const [starID, setStarID] = useState('');
 
   const handleSubmitStarInfo= async (event)=> {
     event.preventDefault();
-    await app.lookUptokenIdToStarInfo(starID).send({from: accounts[0] }).then(res=> setStarInfoResponse({blockHash: res.blockHash}));
+    let name = await app.lookUptokenIdToStarInfo(starID).call();
+    setStarInfoResponse(name)
   }
     return (
        <>
@@ -16,12 +17,11 @@ function StarInfo1({ accounts, app }) {
               Star ID
               <input type="text" name="Star id" value={starID} onChange={(event)=> setStarID(event.target.value)}  />
             </label>
-          <button disabled={!starID} type="submit">Star Info</button>
+          <button disabled={!starID} type="submit">Look up a Star</button>
         </form>
         {starInfoResponse && (
         <div className="box">
-            <h3 className="title">Block Hash:</h3>
-            <p className="title-info">{starInfoResponse.blockHash}</p>
+            <h3 className="title">Star Name: {starInfoResponse}</h3>
         </div>
         )}
        </>
