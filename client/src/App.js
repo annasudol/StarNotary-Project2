@@ -7,7 +7,8 @@ import "./App.css";
 import AddStar from "./AddStar.js";
 import StarInfo from "./StarInfo.js";
 import SellStarForm from "./SellStarForm.js";
-import ExchangeStarForm from "./ExchangeStarForm.js"
+import ExchangeStarForm from "./ExchangeStarForm.js";
+import TransferStar from "./TransferStar.js"
 function App() {
   const [app, setApp] = useState({ web3: null, accounts: null, contract: null });
  
@@ -35,25 +36,21 @@ function App() {
     
 }, []);
 
-useEffect(()=> {
- console.log(app.contract)
-}, [app.contract])
 
-
-
-    if (!app.web3) {
-      return <div>Loading Web3, accounts, and contract...</div>;
-    }
-    const { accounts, contract } = app
-    return (
-      <div className="App">
-        <h1>StarNotary DAPP</h1>
-        <AddStar accounts={accounts} app={contract}/>
-        <StarInfo accounts={accounts} app={contract} />
-        <SellStarForm accounts={accounts} app={contract} />
-        <ExchangeStarForm accounts={accounts} app={contract} />
-      </div>
-    );
+if (!app.web3) {
+  return <div>Loading Web3, accounts, and contract...</div>;
+}
+const { accounts, contract } = app
+return (
+  <div className="App">
+    <h1>StarNotary DAPP</h1>
+    <AddStar accounts={accounts} app={contract}/>
+    <StarInfo accounts={accounts} app={contract} />
+    <SellStarForm accounts={accounts} app={contract} />
+    <ExchangeStarForm accounts={accounts} app={contract} />
+    <TransferStar accounts={accounts} app={contract} />
+  </div>
+);
   
 }
 
