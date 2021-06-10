@@ -11,14 +11,6 @@ The project involve modifying the StarNotary contract to achieve the following:
 (7) Modifying the front end of the DAPP
 
 
-### Versions
-(1) Truffle v5.3.8
-(2) openzeppelin-solidity 2.3.0
-(2) ERC-721 Token Name:   Anna Super Star
-(3) ERC-721 Token Symbol: ASS
-(4) Project ID on the Rinkeby Test Network: '443eb53cf6f346a3b65cc4d97867a33c'
-
-
 # Deploying this DAPP locally
 (1) Add to local network to Metamask with url: http://127.0.0.1:9545 and Chain ID: 1337
 (2) Navigate to the project folder and run truffle develop or sudo truffle develop
@@ -40,3 +32,11 @@ The project involve modifying the StarNotary contract to achieve the following:
 (6) Run npm install
 (7) Run npm start
 (8) Open http://localhost:3000
+
+
+### Versions
+(1) Truffle v5.3.8
+(2) openzeppelin-solidity 2.3.0
+(2) ERC-721 Token Name: Anna Super Star
+(3) ERC-721 Token Symbol: ASS
+(4) Project ID on the Rinkeby Test Network: '443eb53cf6f346a3b65cc4d97867a33c'
