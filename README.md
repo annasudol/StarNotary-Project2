@@ -21,6 +21,7 @@ The project involve modifying the StarNotary contract to achieve the following:
 (7) Run npm install
 (8) Run npm start
 (9) Open http://localhost:3000
+(10) Add at least two acconts to MetaMAsk using Private Keys, that was provided in terminal after delopoying the contract
 
 
 # Deploying the contract on the Rinkeby Test network
